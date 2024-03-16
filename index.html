@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://static.soulmachines.com/widget-snippet-1.12.0.min.js"
+    data-sm-api-key="eyJzb3VsSWQiOiJkZG5hLW91dHNvdXJjZWJyZWV6ZWI2ZGQtLWV4cGxvcmVyIiwiYXV0aFNlcnZlciI6Imh0dHBzOi8vZGguYXouc291bG1hY2hpbmVzLmNsb3VkL2FwaS9qd3QiLCJhdXRoVG9rZW4iOiJhcGlrZXlfdjFfZmEwMmRkOTYtNTkwMC00M2Q4LTg1MjctOGZmMTVhMDIwMmUyIn0="></script>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Neogym</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="responsive.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <!-- Header content goes here -->
+  </div>
+
+  <!-- Us section -->
+  <!-- Us section content goes here -->
+
+  <!-- end us section -->
+
+
+  <!-- heathy section -->
+  <!-- Heathy section content goes here -->
+
+  <!-- end heathy section -->
+
+  <!-- trainer section -->
+  <!-- Trainer section content goes here -->
+
+  <!-- end trainer section -->
+
+  <!-- contact section -->
+  <!-- Contact section content goes here -->
+
+  <!-- end contact section -->
+
+  <!-- info section -->
+  <!-- Info section content goes here -->
+
+  <!-- end info_section -->
+
+  <!-- footer section -->
+  <!-- Footer section content goes here -->
+
+  <footer class="container-fluid footer_section">
+    <p>
+      &copy; 2020 All Rights Reserved. Design by Christopher Alcantara
+    </p>
+  </footer>
+  <!-- footer section -->
+
+  <script src="jquery-3.4.1.min"></script>
+  <script src="bootstrap.js"></script>
+
+  <script>
+    // Digital Person integration
+    if (typeof window === 'undefined') {
+      // This code will run in Node.js environment
+      console.log('This code is running in a Node.js environment.');
+    } else {
+      // This code will only run in the browser environment
+      const videoEl = document.getElementById('sm-video');
+
+      if (videoEl) {
+        const scene = new Scene({
+          apiKey: 'eyJzb3VsSWQiOiJkZG5hLW91dHNvdXJjZWJyZWV6ZWI2ZGQtLWV4cGxvcmVyIiwiYXV0aFNlcnZlciI6Imh0dHBzOi8vZGguYXouc291bG1hY2hpbmVzLmNsb3VkL2FwaS9qd3QiLCJhdXRoVG9rZW4iOiJhcGlrZXlfdjFfZmEwMmRkOTYtNTkwMC00M2Q4LTg1MjctOGZmMTVhMDIwMmUyIn0='
+        });
+
+        scene.connect()
+          .then(sessionId => {
+            console.log('Success! Session ID:', sessionId);
+            scene.startVideo().then(videoState => {
+              console.log('Video started', videoState);
+            }).catch(error => console.log('Video start error:', error));
+          })
+          .catch(error => {
+            console.log('Connection failed:', error);
+            // Agrega lógica de manejo de errores adicional aquí
+          });
+      } else {
+        console.log('Element with ID "sm-video" not found.');
+      }
+    }
+  </script>
+</body>
+
+</html>
